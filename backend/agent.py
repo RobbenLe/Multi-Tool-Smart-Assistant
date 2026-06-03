@@ -25,21 +25,11 @@ agent = create_react_agent(llm, tools, checkpointer=memory)
 def run_agent(mess: str, session_id: str) -> str:
    try:
       config = {"configurable": {"thread_id": session_id}}
-      response_weather = agent.invoke({
+      response = agent.invoke({
          "messages": [("human", mess)]
       }, config=config)
-      return response_weather["messages"][-1].content
+      return response["messages"][-1].content
    except Exception as e:
       return(f"Error: {e}")
 
-
-if __name__ == "__main__":
-   while True:
-      user_input = input("Enter the question here:  ")
-      if user_input == "exit" or user_input == "quit" or user_input == "stop":
-         print("AI AGENT STOP WORKING")
-         break
-      else:
-         result = run_agent(user_input, "Robben_Session_1")
-         print(result)
 

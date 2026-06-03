@@ -54,7 +54,7 @@ def get_weather(city_name: str) -> str:
 ##############################################################
         #Calculate Expression
 ##############################################################
-description="Calculate any math expression. Use when user sends numbers with operators like '15 + 8' or asks to calculate something. Input should be a valid math expression like '2 + 2' or '15 * 8 / 3'"
+@tool(description="Calculate any math expression. Use when user sends numbers with operators like '15 + 8' or asks to calculate something. Input should be a valid math expression like '2 + 2' or '15 * 8 / 3'")
 def calculate(expression:  str) -> str:
     allowed_charecter = ("+-*/0123456789")
 
