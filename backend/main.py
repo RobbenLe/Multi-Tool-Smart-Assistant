@@ -8,7 +8,7 @@ import uuid
 app = FastAPI()
 
 #CORS Middleware(app)
-CORSMiddleware(
+app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],
     allow_methods=["*"],
