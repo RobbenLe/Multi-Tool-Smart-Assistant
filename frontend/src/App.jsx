@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import axios from 'axios'
 
-const API_URL = "http://localhost:8000"
+const API_URL = "https://multi-tool-smart-assistant-production.up.railway.app"
 
 function App() {
     const [chats, setChats] = useState([])
